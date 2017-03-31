@@ -1,10 +1,10 @@
 package com.goovis.signtest;
 
+import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,9 +18,9 @@ import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener{
+public class MainActivity extends Activity implements GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener{
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = MainActivity.class.getSimpleName();
     private GoogleApiClient mGoogleApiClient;
     private SignInButton mSignInButton;
     private Button mSignOutButton;
